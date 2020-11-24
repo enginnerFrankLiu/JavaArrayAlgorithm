@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.HashSet;
+
 public class Main {
 
     static void ArrayUnionCount() {
@@ -23,7 +25,7 @@ public class Main {
 //0 这种元素，通不过测试//case 0跑不过的原因，如果数据源中包含0, 然后，然后我们初始化的temp数组，默认的值也是0；
         int[] aArray = { 1,0};
         int[] bArray = { 2,0};
-        int[] result = getUnionOfArray(aArray, bArray);
+        Integer[] result = getUnionOfArrayV2(aArray, bArray);
         printArray(result);
 
 
@@ -79,7 +81,27 @@ public class Main {
         return result;
     }
 
+    static Integer [] getUnionOfArrayV2(int[] aArray, int[] bArray) {
+        HashSet<Integer> result=new HashSet<Integer>();
+        for (int i = 0; i < aArray.length; i++) {
+            int a = aArray[i];
+            for (int j = 0; j < bArray.length; j++) {
+                int b = bArray[j];
+                if (a == b) {
+                    result.add(a);
+                }
+            }
+        }
+        return result.toArray( new Integer [result.size()]);
+    }
+
     static void printArray(int [] arr){
+        for (int i : arr) {
+            System.out.println(i);
+        }
+    }
+
+    static void printArray(Integer [] arr){
         for (int i : arr) {
             System.out.println(i);
         }

@@ -1,7 +1,14 @@
 package com.company;
 
-import java.util.HashSet;
+import com.sun.xml.internal.ws.wsdl.parser.MemberSubmissionAddressingWSDLParserExtension;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+
+//about half of month
+//we din't push new commit into our private repos to improve my java programming skill.
+//fuck stupid guy.
 public class Main {
 
     static void ArrayUnionCount() {
@@ -23,12 +30,15 @@ public class Main {
 
 
 //0 这种元素，通不过测试//case 0跑不过的原因，如果数据源中包含0, 然后，然后我们初始化的temp数组，默认的值也是0；
-        int[] aArray = { 1,0};
-        int[] bArray = { 2,0};
-        Integer[] result = getUnionOfArrayV2(aArray, bArray);
-        printArray(result);
+//        int[] aArray = { 1,0};
+//        int[] bArray = { 2,0};
+//        Integer[] result = getUnionOfArrayV2(aArray, bArray);
+//        printArray(result);
 
-
+//        int[] aArray = { 1,1,1,1,3,2};
+//        int[] bArray = { 3,4,5,6,1,1};
+//        Map map = getUnionOfArrayV3(aArray, bArray);
+//        System.out.println(map);
     }
 
     /**
@@ -95,6 +105,26 @@ public class Main {
         return result.toArray( new Integer [result.size()]);
     }
 
+    //这个还要加上元素出现的次数;
+    static Map getUnionOfArrayV3(int[] aArray, int[] bArray) {
+        Map<Integer,Integer> result= new HashMap<>();
+        for (int i = 0; i < aArray.length; i++) {
+            int a = aArray[i];
+            for (int j = 0; j < bArray.length; j++) {
+                int b = bArray[j];
+                if (a == b) {
+                    if(result.containsKey(a)){
+                        int count=result.get(a)+1;
+                        result.put(a,count);
+                    }else{
+                        result.put(a,1); //首次初始化的各种数据
+                    }
+                }
+            }
+        }
+        return result;
+    }
+
     static void printArray(int [] arr){
         for (int i : arr) {
             System.out.println(i);
@@ -108,6 +138,14 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        ArrayUnionCount();
+
+        System.out.print("start");
+
+        SumInfo sum=new SumInfo();
+        sum.test();
+        System.out.print("hash----方式进行查找");
+        sum.testHash();
+        
+        System.out.print("end");
     }
 }

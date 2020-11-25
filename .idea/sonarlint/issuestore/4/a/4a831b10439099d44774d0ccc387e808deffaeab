@@ -1,0 +1,15 @@
+
+X	java:S125"<This block of commented-out lines of code should be removed.(ô·æð8¤âºÅß.
+Z	java:S106m"9Replace this use of System.out or System.err by a logger.(´‹¹öþÿÿÿÿ8ªÒÅß.
+]	java:S125"<This block of commented-out lines of code should be removed.(¾ÏÍüÿÿÿÿ8¤âºÅß.
+]	java:S125"<This block of commented-out lines of code should be removed.(ÆãÓíûÿÿÿÿ8¤âºÅß.
+{
+java:S3012R"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(àÆ¶Óþÿÿÿÿ8¤âºÅß.
+{
+java:S2293X"YReplace the type specification in this constructor call with the diamond operator ("<>").(¨¤›·þÿÿÿÿ8é ¿Åß.
+X	java:S125O"<This block of commented-out lines of code should be removed.(½Å·á8¤âºÅß.
+Z	java:S106g"9Replace this use of System.out or System.err by a logger.(´‹¹öþÿÿÿÿ8¤âºÅß.
+o
+java:S37765"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(€·¸£8¤âºÅß.
+j	java:S100
+"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ÛþÅ8¤âºÅß.

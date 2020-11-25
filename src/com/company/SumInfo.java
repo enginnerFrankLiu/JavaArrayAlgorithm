@@ -53,4 +53,32 @@ public class SumInfo {
         }
          System.out.print(indexs);
     }
+
+    /**
+     * "aaaabcccddd".
+     * 字符串中第一个唯一的元素
+     * count=1 在我们的hashmap中的
+     */
+    public void testString(){
+        String strs="aaaabcccddd";
+        HashMap<Character,Integer> map=new HashMap<Character,Integer>();
+        Integer position=-1;
+        int length=strs.length();
+        for(int i=0;i<length;i++){
+             Character temp=strs.charAt(i);
+            if(map.containsKey(temp)){
+                Integer count=map.get(temp)+1;
+                map.put(temp,count);
+            }else{
+                map.put(temp,1);
+            }
+        }
+        //再来遍历我们的map找出count=1 的元素
+        for(int i=0;i<length;i++){
+            if(map.get(strs.charAt(i))==1){
+                position=i;
+            }
+        }
+        System.out.println(position);
+    }
 }

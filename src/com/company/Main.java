@@ -137,15 +137,25 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) {
+    static void md(){
 
-        System.out.print("start");
+
+        System.out.println("start");
 
         SumInfo sum=new SumInfo();
         sum.test();
         System.out.print("hash----方式进行查找");
         sum.testHash();
-        
-        System.out.print("end");
+
+        System.out.print("字符串元素中第一个，不重复（唯一的元素）----------");
+        sum.testString();
+
+        System.out.println("end");
+
+    }
+
+    public static void main(String[] args) {
+
+        md();
     }
 }

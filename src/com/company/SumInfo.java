@@ -3,6 +3,11 @@ package com.company;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 也就是说，我们元素的查找;
+ * 1.暴力枚举
+ * 2.hash查找
+ */
 public class SumInfo {
 
     /**
